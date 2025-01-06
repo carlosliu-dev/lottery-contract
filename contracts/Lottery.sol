@@ -69,6 +69,7 @@ contract Lottery is Ownable, Initializable, Testable {
         Status lotteryStatus;       // Status for lotto
         uint256 prizePoolInCake;    // The amount of cake for prize money
         uint256 costPerTicket;      // Cost per ticket in $cake
+        uint256 costEthPerTicket;      // Cost per ticket in ETH
         uint8[] prizeDistribution;  // The distribution for prize money
         uint256 startingTimestamp;      // Block timestamp for star of lotto
         uint256 closingTimestamp;       // Block timestamp for end of entries
@@ -391,6 +392,7 @@ contract Lottery is Ownable, Initializable, Testable {
         uint8[] calldata _prizeDistribution,
         uint256 _prizePoolInCake,
         uint256 _costPerTicket,
+        uint256 _costEthPerTicket,
         uint256 _startingTimestamp,
         uint256 _closingTimestamp
     )
@@ -438,6 +440,7 @@ contract Lottery is Ownable, Initializable, Testable {
             lotteryStatus,
             _prizePoolInCake,
             _costPerTicket,
+            _costEthPerTicket,
             _prizeDistribution,
             _startingTimestamp,
             _closingTimestamp,
